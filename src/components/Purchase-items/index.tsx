@@ -53,7 +53,7 @@ function PurchaseItemTable() {
     setErrTable,
     errTableData,
   } = useMakePurchase();
-
+  const searchByProp = "supplier";
   return (
     <>
       {/* <Autocomplete api="/customers"/> */}
@@ -91,7 +91,11 @@ function PurchaseItemTable() {
         <hr />
         {/* Div for data table */}
         <div className="row mt-2 pr-4">
-          <DataTable columns={columns} data={data as any} />
+          <DataTable
+            columns={columns}
+            data={data as any}
+            searchByProp={searchByProp}
+          />
         </div>
 
         {/* Alert popup for delet action */}

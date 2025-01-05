@@ -35,7 +35,7 @@ function Table(): JSX.Element {
   } = tableHook();
   // Add hook
   const { handleAddSubmit, buttonLoader } = useAddEditHook();
-
+  const searchByProp = "name";
   return (
     <>
       <div className="container mx-auto py-10 flex flex-col">
@@ -65,7 +65,11 @@ function Table(): JSX.Element {
         <hr />
         {/* Div for data table */}
         <div className="row mt-2 pr-4">
-          <DataTable columns={columns} data={data as any} />
+          <DataTable
+            columns={columns}
+            data={data as any}
+            searchByProp={searchByProp}
+          />
         </div>
 
         {/* Alert popup for delet action */}

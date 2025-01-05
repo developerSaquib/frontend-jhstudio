@@ -36,6 +36,7 @@ function ServicesTable(): JSX.Element {
   // Add hook
   const { handleCustomerAddSubmit, buttonLoader } = useAddEditServices();
 
+  const searchByProp = "name";
   return (
     <>
       <div className="container mx-auto py-10 flex flex-col">
@@ -65,7 +66,11 @@ function ServicesTable(): JSX.Element {
         <hr />
         {/* Div for data table */}
         <div className="row mt-2 pr-4">
-          <DataTable columns={columns} data={data as any} />
+          <DataTable
+            columns={columns}
+            data={data as any}
+            searchByProp={searchByProp}
+          />
         </div>
 
         {/* Alert popup for delet action */}

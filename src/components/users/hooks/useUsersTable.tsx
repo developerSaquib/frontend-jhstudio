@@ -141,53 +141,6 @@ const useUsersTable = () => {
         </Button>
       ),
     },
-    // {
-    //   id: "actions",
-    //   cell: ({ row }) => {
-    //     const records = row.original;
-
-    //     return (
-    //       <DropdownMenu>
-    //         <DropdownMenuTrigger asChild>
-    //           <Button variant="ghost" className="h-8 w-8 p-0">
-    //             <span className="sr-only">Open menu</span>
-    //             <MoreHorizontal className="h-4 w-4" />
-    //           </Button>
-    //         </DropdownMenuTrigger>
-    //         <DropdownMenuContent align="end">
-    //           <DropdownMenuLabel>Actions</DropdownMenuLabel>
-    //           <DropdownMenuSeparator />
-    //           <DropdownMenuItem>
-    //             <Button
-    //               onClick={() => handleEditClick(Number(records.id))}
-    //               style={{
-    //                 background: "none",
-    //                 color: "red",
-    //                 border: "none",
-    //                 width: "100%",
-    //               }}
-    //             >
-    //               Edit Record
-    //             </Button>
-    //           </DropdownMenuItem>
-    //           <DropdownMenuItem>
-    //             <Button
-    //               onClick={() => handleDeleteClick(Number(records.id))}
-    //               style={{
-    //                 background: "none",
-    //                 color: "red",
-    //                 border: "none",
-    //                 width: "100%",
-    //               }}
-    //             >
-    //               Delete Record
-    //             </Button>
-    //           </DropdownMenuItem>
-    //         </DropdownMenuContent>
-    //       </DropdownMenu>
-    //     );
-    //   },
-    // },
   ];
 
   //API for table data

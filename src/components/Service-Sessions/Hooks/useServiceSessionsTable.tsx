@@ -85,7 +85,7 @@ const useServiceSessionsTable = () => {
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "desc")}
         >
-          Customer
+          Customer Name
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       ),

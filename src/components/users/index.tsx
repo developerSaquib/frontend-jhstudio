@@ -21,21 +21,8 @@ export default function Services(): JSX.Element {
 
 function UsersTable(): JSX.Element {
   // Table hook
-  const {
-    columns,
-    data,
-    // dynamicFormSchema,
-    loading,
-    // showAlert,
-    // setShowAlert,
-    // handleAgreeDelete,
-    // dataEditModeData,
-    // handleEditSubmit,
-    // editButtonLoader,
-  } = useUsersTable();
-  // Add hook
-  // const { handleCustomerAddSubmit, buttonLoader } = useAddEditUsers();
-
+  const { columns, data, loading } = useUsersTable();
+  const searchByProp = "name";
   return (
     <>
       <div className="container mx-auto py-10 flex flex-col">
@@ -50,34 +37,16 @@ function UsersTable(): JSX.Element {
               Our Users
             </p>
           </div>
-          {/* Div for side short form */}
-          {/* <div className="mb-5 flex justify-end">
-            <SideSheet
-              formGenSchema={dynamicFormSchema}
-              onSubmit={handleCustomerAddSubmit}
-              buttonLoader={buttonLoader}
-              editButtonLoader={editButtonLoader}
-              editModeData={dataEditModeData as any}
-              onEditSubmit={handleEditSubmit as any}
-            />
-          </div> */}
         </div>
         <hr />
         {/* Div for data table */}
         <div className="row mt-2 pr-4">
-          <DataTable columns={columns} data={data as any} />
-        </div>
-
-        {/* Alert popup for delet action */}
-        {/* {showAlert && (
-          <AlertBox
-            title="Delete Alert!!"
-            description="Are you sure to delete this record?"
-            onAgreeFn={handleAgreeDelete}
-            open={showAlert}
-            setOpen={setShowAlert}
+          <DataTable
+            columns={columns}
+            data={data as any}
+            searchByProp={searchByProp}
           />
-        )} */}
+        </div>
       </div>
     </>
   );

@@ -30,12 +30,14 @@ import React from "react";
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  searchByProp?: string;
   // sortableColumns: any;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  searchByProp,
 }: // sortableColumns,
 DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
@@ -67,19 +69,15 @@ DataTableProps<TData, TValue>) {
       <div className="flex items-center justify-between py-4">
         <Input
           placeholder="Search Records"
-          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
-          onChange={(event: any) =>
-            table.getColumn("name")?.setFilterValue(event.target.value)
+          value={
+            (table.getColumn(searchByProp || "")?.getFilterValue() as string) ??
+            ""
           }
-          // onChange={(event: any) => {
-          //   sortableColumns?.forEach((column: any) => {
-          //     if (column.sortBy) {
-          //       table
-          //         .getColumn(column.sortBy)
-          //         ?.setFilterValue(event.target.value);
-          //     }
-          //   });
-          // }}
+          onChange={(event: any) =>
+            table
+              .getColumn(searchByProp || "")
+              ?.setFilterValue(event.target.value)
+          }
           className="max-w-sm"
         />
         <p

@@ -251,6 +251,7 @@ export function SideSheet({
                 : handleSubmit(onSubmit)
             }
             className="col-span-2 grid grid-cols-2 gap-4 mt-5"
+            autoComplete="off"
           >
             {formGenSchema.fields
               .filter((field) => !field.isHidden)
