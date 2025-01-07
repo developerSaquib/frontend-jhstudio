@@ -56,11 +56,11 @@ export default function Autocomplete({
     try {
       const response: any = await getData(
         api,
-        filtercb ? filtercb(nquery) : filter
+        filtercb ? filtercb(searchQuery) : filter
       ); // Replace with your API logic
       const newOptions = response.data.map((item: any) => ({
         value: `${item.id}`,
-        label: item.name,
+        label: `${item.name}(${item.mobile})`,
       }));
       setOptions(newOptions);
     } catch (error) {

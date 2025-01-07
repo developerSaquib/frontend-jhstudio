@@ -33,6 +33,7 @@ export const formSchema = {
           fields: {
             name: true,
             id: true,
+            mobile: true,
           },
           ...(query
             ? {

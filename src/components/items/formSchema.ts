@@ -112,7 +112,7 @@ export const schema: any = {
       setExtraValues: true,
       takeValue: "percentage",
       extraValuesToSet: ["taxPerc"],
-      defaultValue: 4,
+      defaultValue: 1,
     },
     // {
     //   label: "Item Cost (Rs.)",
@@ -136,6 +136,7 @@ export const schema: any = {
       readOnly: true,
       error: "",
       validations: [],
+      defaultValue: "0",
     },
     // {
     //   label: "Is Featured",

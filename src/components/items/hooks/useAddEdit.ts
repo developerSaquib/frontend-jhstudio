@@ -42,7 +42,6 @@ const useAddEditHook = () => {
         if (err.response.status === 409) {
           toast.error(err?.response?.data?.message);
         } else {
- 
           toast.error("Error while saving record, Please try again!");
         }
       }
