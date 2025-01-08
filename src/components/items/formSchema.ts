@@ -93,13 +93,8 @@ export const schema: any = {
       name: "rating",
       type: "number",
       required: false,
-      error: "Tax Amount field is required",
-      validations: [
-        {
-          max: 2,
-          message: "Should not have more than 100 characters",
-        },
-      ],
+      error: "",
+      validations: [],
     },
     {
       label: "Tax",
@@ -133,7 +128,7 @@ export const schema: any = {
       name: "taxAmount",
       type: "number",
       required: false,
-      readOnly: true,
+      readOnly: false,
       error: "",
       validations: [],
       defaultValue: "0",

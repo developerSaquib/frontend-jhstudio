@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ColumnDef } from "@tanstack/react-table";
 import { MoreHorizontal, ArrowUpDown } from "lucide-react";
@@ -267,6 +268,7 @@ const useTable = () => {
           ],
         };
         response = await getDataById(schema.postUrl, recordId, filter);
+        console.log('response :', response.data);
         setEditModaData(response.data);
       };
       fetchEdiData();
