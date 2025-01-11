@@ -152,7 +152,6 @@ export function SideSheet({
         nameTypeMapping[element?.name] = element.type;
       });
     if (selectedRecordId) {
-      console.log("selectedRecordId :", selectedRecordId);
       Object.entries(editModeData).forEach(([key, value]) => {
         if (nameTypeMapping[key] === "select") {
           setValue(key, `${value?.id}`);

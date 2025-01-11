@@ -65,8 +65,8 @@ export const formSchema = {
       name: "taxAmount",
       type: "number",
       required: false,
-      readOnly: true,
-      error: "Tax Amount field is required",
+      readOnly: false,
+      error: "",
       validations: [],
     },
     {

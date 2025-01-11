@@ -268,7 +268,6 @@ const useTable = () => {
           ],
         };
         response = await getDataById(schema.postUrl, recordId, filter);
-        console.log('response :', response.data);
         setEditModaData(response.data);
       };
       fetchEdiData();
