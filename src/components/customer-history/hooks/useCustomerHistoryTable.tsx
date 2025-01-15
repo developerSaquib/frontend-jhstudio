@@ -144,7 +144,7 @@ const useCustomerHistoryTable = () => {
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "desc")}
         >
-          Status
+          Is InActive
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       ),
@@ -210,7 +210,7 @@ const useCustomerHistoryTable = () => {
         item.birthdateUpdated = `${day}/${month}/${year}`;
         //Status in Active/Not Active
         item.isInactiveUpdated =
-          item.isInactive === 1 ? "Active" : "Not Active";
+          item.isInactive ? "Yes" : "No";
         return item;
       });
       setTableData(response);
@@ -233,7 +233,7 @@ const useCustomerHistoryTable = () => {
       const fetchData = async () => {
         try {
           const apiFilter = {
-            limit: 10,
+            limit: 15,
             relations: [
               {
                 name: "customer",
